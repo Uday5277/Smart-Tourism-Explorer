@@ -160,7 +160,7 @@ This ensures:
 
 ---
 
-### 🔹 Step 1: Clone the Repository
+### 🔹 Clone the Repository
 ```bash
 git clone https://github.com/your-username/smart-tourism-explorer.git
 cd smart-tourism-explorer
