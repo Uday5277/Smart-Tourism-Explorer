@@ -1,4 +1,4 @@
-# 🌍 Smart Tourism Explorer
+# Smart Tourism Explorer
 ### A Database-Centric Travel Recommendation Platform
 
 Smart Tourism Explorer is a **full-stack, database-driven travel recommendation system** designed to explore cities, hotels, attractions, and transport options efficiently.  
@@ -6,7 +6,7 @@ The project emphasizes **relational database design, stored procedures, caching,
 
 ---
 
-## 🎯 Project Objective
+##  Project Objective
 
 To design and deploy a **scalable travel exploration system** where:
 - Core business logic resides inside the database
@@ -16,7 +16,7 @@ To design and deploy a **scalable travel exploration system** where:
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 Client (React)
 ↓
@@ -29,7 +29,7 @@ Redis (Read-through Cache)
 
 ---
 
-## 🧩 Technology Stack
+## Technology Stack
 
 ### Backend
 - Node.js (ESM)
@@ -55,7 +55,7 @@ Redis (Read-through Cache)
 
 ---
 
-## 🗄️ Database Design (Core Strength)
+## Database Design (Core Strength)
 
 ### 🔹 Schema Characteristics
 - Fully normalized relational schema
@@ -81,7 +81,7 @@ This prevents polluting core tables with raw external data.
 
 ---
 
-## ⚙️ Stored Procedures (Business Logic)
+## Stored Procedures (Business Logic)
 
 The application relies on PostgreSQL **functions** for all recommendation logic.
 
@@ -99,7 +99,7 @@ Examples:
 
 ---
 
-## 🔁 Triggers & Audit Logging
+## Triggers & Audit Logging
 
 Triggers are used to:
 - Track changes in critical tables
@@ -110,7 +110,7 @@ This demonstrates **database-first engineering**.
 
 ---
 
-## ⚡ Performance Optimization
+## Performance Optimization
 
 ### 🔹 Indexing
 Indexes added on:
@@ -135,7 +135,7 @@ If Redis is unavailable, the system **gracefully falls back to PostgreSQL**.
 
 ---
 
-## 🌐 External Data Ingestion
+## External Data Ingestion
 
 Travel data is fetched using **GeoApify API**.
 
@@ -152,7 +152,7 @@ This ensures:
 
 ---
 
-## 🚀 Running the Project Locally (Docker)
+## Running the Project Locally (Docker)
 
 ### 🔹 Prerequisites
 - Docker
@@ -162,21 +162,27 @@ This ensures:
 
 ### 🔹 Clone the Repository
 ```bash
-git clone https://github.com/your-username/smart-tourism-explorer.git
-cd smart-tourism-explorer
+ git clone https://github.com/your-username/smart-tourism-explorer.git
+ cd smart-tourism-explorer
+```
 
-**Environment Configuration**
+### 🔹 Environment Configuration
 
 Create a .env file in the root directory:
 
+```bash
 DATABASE_URL=postgresql://postgres:postgres@postgres:5432/tourism
 REDIS_URL=redis://redis:6379
 PORT=5000
+```
 
+```bash
 docker-compose up --build
+```
 
 **Restore Database Data**
 
 If you have an existing database dump:
-
+ ```bash
 docker exec -i smart-tourism-postgres psql -U postgres -d tourism < tourism_backup.sql
+```
